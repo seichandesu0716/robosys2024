@@ -7,10 +7,10 @@ def tonum(s):
     except:
         return float(s)
 
-ant = 0
 
+ant = 0
 for line in sys.stdin:
     line = line.rstrip()
-        ant += tonum(line)
+    ant += tonum(line)
 
 print(ans)
