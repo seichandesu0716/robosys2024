@@ -12,7 +12,7 @@ def tonum(s):
 ant = 0
 for line in sys.stdin:
     line = line.rstrip()
-    ant += tonum(lin
+    ant += tonum(line)
 
 
 print(ans)
