@@ -2,7 +2,6 @@
 import sys
 
 
-
 def tonum(s):
     try:
         return int(s)
@@ -10,10 +9,9 @@ def tonum(s):
         return float(s)
 
 
-
 ans = 0
 for line in sys.stdin:
-    line = line.strip()
+    line = line.rstrip()
         ans += tonum(line)
 
 print(ans)
