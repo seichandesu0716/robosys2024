@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# SPDX-FileCopyrightText: 2024 Sei Takahashi <seitaka_0716_poke@yahoo.com# SPDX-FileCopyrightText: 2024 Ryuichi Ueda# SPDX-FileCopyrightText: 2024 Ryuichi Ueda>
+# SPDX-FileCopyrightText: 2024 Sei Takahashi <seitaka_0716_poke@yahoo.com
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 
 
