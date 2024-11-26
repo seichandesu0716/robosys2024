@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Sei Takahashi <seitaka_0716_poke@yahoo.com
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 
 
@@ -13,6 +15,5 @@ ans = 0
 for line in sys.stdin:
     line = line.rstrip()
     ans += tonum(line)
-
 
 print(ans)
