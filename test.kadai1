@@ -10,7 +10,7 @@ ng () {
 res=0
 
 # Test 1: 正常な入力で3回のシュート（すべて "left" を選択）
-out=$(printf "3\nleft\nleft\nleft\n" | ./pkscript.py)
+out=$(printf "3\nleft\nleft\nleft\n" | ./kadai1.py)
 [ $? -eq 0 ] || ng "$LINENO"
 echo "$out" | grep -q "3 本中 [0-3] ゴールを決めました！" || ng "$LINENO"
 
