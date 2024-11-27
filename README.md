@@ -1,14 +1,12 @@
 # kadai1コマンド
 サッカーのPKを行うプログラム
 
-# インストール方法
-<h1>
-  
+# インストール方法  
 ~~~
 git clone https://github.com/seichandesu0716/robosys2024.git
 ~~~
   
-<h2> リポジトリの移動
+2.リポジトリの移動
   
 ~~~
 cd tmp/robosys2024
