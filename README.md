@@ -10,9 +10,21 @@ git clone https://github.com/seichandesu0716/robosys2024.git
 ~~~
 cd tmp/robosys2024
 ~~~
+**実行**
+~~~
+./kadai1
+~~~
 # サンプル
 
-
+# テスト環境
+ubuntu20.04
+# ソフトウェア
+python(テスト済みバージョン)
 # 参考資料
 random関数について・・・https://beginner-engineers.com/random-usage/
+# ライセンス
+このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます
+
+このパッケージコードの一部は、（CC-BY-SA4.0by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです
+https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024
 
