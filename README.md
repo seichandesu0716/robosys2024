@@ -8,5 +8,6 @@ git clone https://github.com/seichandesu0716/robosys2024.git
 >2サンプル
 
 
-
+#参考資料
+randam関数について・・・https://beginner-engineers.com/random-usage/
 
