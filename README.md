@@ -19,7 +19,7 @@ cd tmp/robosys2024
 # テスト環境
 ubuntu20.04
 # ソフトウェア
-python(テスト済みバージョン)
+python(テスト済みバージョン)3.7~3.10
 # 参考資料
 random関数について・・・https://beginner-engineers.com/random-usage/
 Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html#1
