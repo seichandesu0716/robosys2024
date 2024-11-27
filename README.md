@@ -2,10 +2,12 @@
 サッカーのPKを行うプログラム
 
 #インストール方法
-<1~~~
+<1
+~~~
 git clone https://github.com/seichandesu0716/robosys2024.git
 ~~
-<2~~~
+<2
+~~~
 cd tmp/robosys2024
 ~~~
 >2サンプル
