@@ -1,12 +1,19 @@
 # kadai1コマンド
 サッカーのPKを行うプログラム
 
->1インストール方法
----
-git clone blob:https://github.com/31775df6-0b80-47f6-9406-605f3202100b 
----
->2サンプル
+# インストール方法  
+~~~
+git clone https://github.com/seichandesu0716/robosys2024.git
+~~~
+---  
+**リポジトリの移動**
+
+~~~
+cd tmp/robosys2024
+~~~
+# サンプル
 
 
-
+# 参考資料
+random関数について・・・https://beginner-engineers.com/random-usage/
 
