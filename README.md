@@ -6,11 +6,11 @@
 ~~~
 git clone https://github.com/seichandesu0716/robosys2024.git
 ~~~
-<2
+<2リポジトリの移動
 ~~~
 cd tmp/robosys2024
 ~~~
->2サンプル
+#サンプル
 
 
 #参考資料
