@@ -9,9 +9,6 @@ def take_penalty(player_number):
 
     directions = ["left", "right"]
     goalie_choice = random.choice(directions)
-    
-    directions = ["left", "right"]
-    goalie_choice = random.choice(directions)
 
     while True:
         player_choice = input(f"シュートの方向を選んでください（left/right）: ").strip()
