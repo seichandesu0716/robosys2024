@@ -5,7 +5,7 @@
 <1
 ~~~
 git clone https://github.com/seichandesu0716/robosys2024.git
-~~
+~~~
 <2
 ~~~
 cd tmp/robosys2024
