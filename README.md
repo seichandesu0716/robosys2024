@@ -6,8 +6,8 @@
 git clone https://github.com/seichandesu0716/robosys2024.git
 ~~~
   
-2.リポジトリの移動
-  
+リポジトリの移動
+---  
 ~~~
 cd tmp/robosys2024
 ~~~
