@@ -6,15 +6,27 @@ import sys
 import random
 
 def take_penalty(player_number):
+<<<<<<< HEAD
 
     directions = ["left", "right"]
     goalie_choice = random.choice(directions)
+=======
+    
+    directions = ["left", "right"]
+    goalie_choice = random.choice(directions)
+
+>>>>>>> ef2fdffda645539465d492ff27b2840a8decbdd3
     while True:
         player_choice = input(f"シュートの方向を選んでください（left/right）: ").strip()
         if player_choice in directions:
             break
         print("無効な選択です！「left」また「right」を選んでください。")
+<<<<<<< HEAD
         print(f"{player_choice}にシュート！")
+=======
+
+    print(f"{player_choice}にシュート！")
+>>>>>>> ef2fdffda645539465d492ff27b2840a8decbdd3
 
     if player_choice == goalie_choice:
         print("失敗！キーパーがセーブしました！")
@@ -35,6 +47,10 @@ def main():
                 print("エラー: シュート回数は正の整数で入力してください。")
         except ValueError:
             print("エラー: シュート回数は正の整数で入力してください。")
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef2fdffda645539465d492ff27b2840a8decbdd3
     print(f" {total_shots} 回のシュートに挑戦します！")
 
     goals = 0
