@@ -1,5 +1,5 @@
 # kadai1コマンド
-(https://github.com/seichandesu0716/robosys2024/blob/main/test.bash/badge.svg)
+![test.bash](https://github.com/seichandesu0716/robosys2024.git)
 サッカーのPKを行うプログラム
 
 # インストール方法 
