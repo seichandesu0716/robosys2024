@@ -4,7 +4,7 @@
 # インストール方法 
 **リポジトリの複製**
 ~~~
-git clone https://github.com/seichandesu0716/robosys2024.git
+git clone https://github.com/seichandesu0716/robosys2024
 ~~~
 **リポジトリの移動**
 ~~~
