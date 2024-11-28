@@ -25,7 +25,7 @@ ubuntu20.04
  (テスト済みバージョン:3.7~3.10)
 
 # 参考資料
-random関数について・・・https://beginner-engineers.com/random-usage/
+random関数について・・・https://beginner-engineers.com/random-usage/ 
 Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html#1
 # ライセンス
 このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます
