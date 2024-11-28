@@ -1,6 +1,6 @@
 # kadai1コマンド
 ![test](https://github.com/seichandesu0716/robosys2024/actions/workflows/test.yml/badge.svg)
-
+![lisence](https://img.shuelds.io/badge/license-BSD_3_Clause_green)
 サッカーのPKを行うプログラム
 
 # インストール方法 
