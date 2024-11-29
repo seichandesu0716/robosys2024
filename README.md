@@ -15,7 +15,7 @@ cd tmp/robosys2024
 ~~~
 **実行**
 ~~~
-echo 3 right left right | ./penalty_kick.py
+$echo 3 right left right | ./penalty_kick.py
 PK戦スタート！ 3 回のシュートに挑戦します！
 rightにシュート！
 ゴール！
@@ -27,19 +27,7 @@ rightにシュート！
 --- 試合結果 ---
 3 本中 1 ゴールを決めました！
 ~~~
-# サンプル
-~~~
-$echo 3 right left right | ./penalty_kick
-PK戦スタート！ 3 回のシュートに挑戦します！
-rightにシュート！
-ゴール！
-leftにシュート！
-失敗！キーパーがセーブしました！
-rightにシュート！
-失敗！キーパーがセーブしました！
-~~~
---- 試合結果 ---
-3 本中 1 ゴールを決めました！
+
 # テスト環境
 ubuntu20.04
 # ソフトウェア
