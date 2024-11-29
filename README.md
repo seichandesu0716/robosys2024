@@ -24,7 +24,7 @@ leftにシュート！
 1 本中 1 ゴールを決めました！
 ~~~
 ~~~
-$echo 3 right left right | ./penalty_kick.py
+$echo 3 right left right | ./penalty_kick
 PK戦スタート！ 3 回のシュートに挑戦します！
 rightにシュート！
 ゴール！
