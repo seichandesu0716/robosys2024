@@ -1,0 +1,62 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Sei Takahashi <seitaka_0716_poke@yahoo.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+import random
+
+def take_penalty(player_choice, goalie_choice):
+    print(f"{player_choice}にシュート！")
+
+    if player_choice == goalie_choice:
+        print("失敗！キーパーがセーブしました！")
+        return False
+    else:
+        print("ゴール！")
+        return True
+
+def main():
+    directions = ["left", "right"]
+    goals = 0
+
+    try:
+        inputs = sys.stdin.read().strip().split()
+        if len(inputs) < 1:
+            print("エラー: 入力が不足しています。シュート回数と方向を指定してください。")
+            sys.exit(1)
+
+        total_shots = int(inputs[0])
+        if total_shots <= 0:
+            print("エラー: シュート回数は正の整数で入力してください。")
+            sys.exit(1)
+
+        player_choices = inputs[1:]
+        if len(player_choices) < total_shots:
+            print("エラー: 指定したシュート回数より少ないシュート方向が入力されました。")
+            sys.exit(1)
+
+        print(f"PK戦スタート！ {total_shots} 回のシュートに挑戦します！")
+
+        for i in range(total_shots):
+            player_choice = player_choices[i]
+            if player_choice not in directions:
+                print("無効な選択です！left または right を選んでください。")
+                sys.exit(1)
+
+            goalie_choice = random.choice(directions)
+            if take_penalty(player_choice, goalie_choice):
+                goals += 1
+
+    except ValueError:
+        print("エラー: シュート回数は正の整数で入力してください。")
+        sys.exit(1)
+    except Exception as e:
+        print(f"エラー: 入力の処理中に問題が発生しました。({e})")
+        sys.exit(1)
+
+    print("\n--- 試合結果 ---")
+    print(f"{total_shots} 本中 {goals} ゴールを決めました！")
+
+if __name__ == "__main__":
+    main()
+
