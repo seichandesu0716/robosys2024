@@ -13,8 +13,15 @@ git clone https://github.com/seichandesu0716/robosys2024
 ~~~
 cd tmp/robosys2024
 ~~~
-**実行**
+**実行例**
 ~~~
+$ echo 1 left | ./penalty_kick
+PK戦スタート！ 1 回のシュートに挑戦します！
+leftにシュート！
+ゴール！
+
+--- 試合結果 ---
+1 本中 1 ゴールを決めました！
 $echo 3 right left right | ./penalty_kick.py
 PK戦スタート！ 3 回のシュートに挑戦します！
 rightにシュート！
