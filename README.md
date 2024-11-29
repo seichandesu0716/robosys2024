@@ -5,7 +5,7 @@
 サッカーのPKを行うプログラム
 
 # 使い方
-**リポジトリの複製**
+**リポジトリをクローン**
 ~~~
 git clone https://github.com/seichandesu0716/robosys2024
 ~~~
