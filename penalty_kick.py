@@ -5,14 +5,19 @@
 import sys
 import random
 
-def take_penalty(player_number, player_choice):
-    directions = ["left", "right"]
+def take_penalty(player_number, directions):
     goalie_choice = random.choice(directions)
 
-    # 入力されたシュート方向を確認
+    # 入力方向の確認
+    if len(sys.argv) < player_number + 2:
+        print("エラー: 指定したシュート回数より少ないシュート方向が入力されました。")
+        sys.exit(1)
+
+    player_choice = sys.argv[player_number + 1].strip()
+
     if player_choice not in directions:
-        print(f"無効な選択です！「left」また「right」を選んでください。")
-        return False
+        print("無効な選択です！「left」また「right」を選んでください。")
+        sys.exit(1)
 
     print(f"{player_choice}にシュート！")
 
@@ -24,32 +29,28 @@ def take_penalty(player_number, player_choice):
         return True
 
 def main():
-    # コマンドライン引数のチェック
-    if len(sys.argv) < 3:
-        print("エラー: シュート回数とシュート方向（leftまたはright）を指定してください。")
-        sys.exit(1)
-
+    # シュート回数を取得
     try:
-        total_shots = int(sys.argv[1])  # コマンドライン引数からシュート回数を取得
+        total_shots = int(sys.argv[1])
         if total_shots <= 0:
-            raise ValueError
+            print("エラー: シュート回数は正の整数で入力してください。")
+            sys.exit(1)
     except ValueError:
         print("エラー: シュート回数は正の整数で入力してください。")
         sys.exit(1)
 
-    directions = sys.argv[2:]  # 2番目以降の引数をシュート方向として取得
+    directions = ["left", "right"]
+    goals = 0
+
+    # シュート方向が足りない場合はエラーを出力
+    if len(sys.argv) < total_shots + 2:
+        print("エラー: 指定したシュート回数より少ないシュート方向が入力されました。")
+        sys.exit(1)
 
     print(f"PK戦スタート！ {total_shots} 回のシュートに挑戦します！")
 
-    goals = 0
     for i in range(1, total_shots + 1):
-        if i <= len(directions):
-            player_choice = directions[i - 1]
-        else:
-            print("エラー: 指定したシュート回数より少ないシュート方向が入力されました。")
-            sys.exit(1)
-
-        if take_penalty(i, player_choice):
+        if take_penalty(i, directions):
             goals += 1
 
     print("\n--- 試合結果 ---")
