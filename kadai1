@@ -5,9 +5,9 @@
 import sys
 import random
 
-def take_penalty(player_number):
+def take_penalty(i):
     directions = ["left", "right"]
-    goalie_choice = random.choice(directions)
+    keeper_choice = random.choice(directions)
 
     while True:
         player_choice = input(f"シュートの方向を選んでください（left/right）: ").strip()
@@ -17,7 +17,7 @@ def take_penalty(player_number):
 
     print(f"{player_choice}にシュート！")
 
-    if player_choice == goalie_choice:
+    if player_choice == keeper_choice:
         print("失敗！キーパーがセーブしました！")
         return False
     else:
