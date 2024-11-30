@@ -63,7 +63,7 @@ READMEについて・・・https://qiita.com/Canard_engineer_c_cpp/items/81ce4e5
 ソフトウェアのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson6.html
 
 Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html#1
-# ライセンス
+# ライセンスと著作物
 ・このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます
 
 ・このパッケージコードの一部は、（CC-BY-SA4.0by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです
