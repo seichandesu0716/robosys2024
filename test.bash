@@ -49,17 +49,14 @@ out=$(echo | ./penalty_kick)
 [ $? -ne 0 ] || ng "$LINENO"
 echo "$out" | grep -q "エラー: 入力が不足しています。シュート回数と方向を指定してください。" || ng "$LINENO"
 
-# 入力が負の数
 out=$(echo -1 right | ./penalty_kick)
 [ $? -ne 0 ] || ng "$LINENO"
 echo "$out" | grep -q "エラー: シュート回数は正の整数で入力してください。" || ng "$LINENO"
 
-# 無効な文字列入力
 out=$(echo 2 abc def | ./penalty_kick)
 [ $? -ne 0 ] || ng "$LINENO"
 echo "$out" | grep -q "無効な選択です。rightかleftを入力してください" || ng "$LINENO"
 
-# 空白のみの入力
 out=$(echo "   " | ./penalty_kick)
 [ $? -ne 0 ] || ng "$LINENO"
 echo "$out" | grep -q "エラー: 入力が不足しています。シュート回数と方向を指定してください。" || ng "$LINENO"
