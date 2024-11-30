@@ -5,10 +5,10 @@
 import sys
 import random
 
-def take_penalty(player_choice, goalie_choice):
+def take_penalty(player_choice, keeper_choice):
     print(f"{player_choice}にシュート！")
 
-    if player_choice == goalie_choice:
+    if player_choice == keeper_choice:
         print("失敗！キーパーがセーブしました！")
         return False
     else:
@@ -43,8 +43,8 @@ def main():
                 print("無効な選択です。rightかleftを入力してください")
                 sys.exit(1)
 
-            goalie_choice = random.choice(directions)
-            if take_penalty(player_choice, goalie_choice):
+            keeper_choice = random.choice(directions)
+            if take_penalty(player_choice, keeper_choice):
                 goals += 1
 
     except ValueError:
