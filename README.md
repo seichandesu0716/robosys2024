@@ -54,7 +54,7 @@ Ubuntu20.04.6 LTS
 # 参考資料
 random関数について・・・https://beginner-engineers.com/random-usage/ 
 
-https://shields.io/badges
+バッジの作成・・・https://shields.io/badges
 
 Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html#1
 # ライセンス
