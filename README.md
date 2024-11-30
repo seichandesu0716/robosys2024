@@ -14,7 +14,9 @@ git clone https://github.com/seichandesu0716/robosys2024
 cd tmp/robosys2024
 ~~~
 **実行方法**
+~~~
 $ echo [シュート回数] [方向]... | ./penalty_kick
+~~~
 ０より大きい数字を「シュート回数」に入力し、「方向」にはシュート回数分の方向を入力する。
 「シュート回数」には０より大きい数字を入力し、「方向」はrightかleftを入力する。
 
