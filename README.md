@@ -56,6 +56,10 @@ random関数について・・・https://beginner-engineers.com/random-usage/
 
 バッジの作成・・・https://shields.io/badges
 
+標準入力・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson3.html#1
+
+ソフトウェアのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson6.html
+
 Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html#1
 # ライセンス
 ・このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます
