@@ -60,7 +60,7 @@ Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2
 # ライセンス
 ・このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます
 
-・このパッケージコードの一部は、（CC-BY-SA4.0by Ryuichi Ueda）のものを、本人の許可を得て自身　　の著作としたものです
+・このパッケージコードの一部は、（CC-BY-SA4.0by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです
 　https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024
 
 ・© 2024 Sei Takahashi
