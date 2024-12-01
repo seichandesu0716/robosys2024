@@ -56,8 +56,6 @@ random関数について・・・https://beginner-engineers.com/random-usage/
 
 バッジの作成・・・https://shields.io/badges
 
-READMEについて・・・https://qiita.com/Canard_engineer_c_cpp/items/81ce4e53881138dbf37f
-
 標準入力・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson3.html#1
 
 ソフトウェアのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson6.html
