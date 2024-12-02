@@ -8,7 +8,7 @@ ng () {
 }
 
 res=0
-#j
+
 out=$(echo "右" | ./penalty_kick)
 echo "$out" | grep -q "キーパーがボールをはじいた" || echo "$out" | grep -q "ゴール！素晴らしいシュート！" || ng "$LINENO"
 
