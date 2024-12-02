@@ -31,7 +31,7 @@ for direction in sys.stdin:
     elif direction == "真ん中" and keeper_choice != "真ん中":
         print("パネンカを蹴った。ゴール！")
     else:
-        print("枠外だ！惜しい！")
+        print("枠外だ")
 
     print("--- PK戦終了 ---")
     break

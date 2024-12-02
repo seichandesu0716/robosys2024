@@ -31,19 +31,22 @@ out=$(echo "左上" | ./penalty_kick)
 echo "$out" | grep -q "ポストに直撃した" || echo "$out" | grep -q "ゴール！隅にシュートを打った！" || ng "$LINENO"
 
 out=$(echo "right" | ./penalty_kick)
-echo "$out" | grep -q "枠外だ！惜しい！" || ng "$LINENO"
+echo "$out" | grep -q "枠外だ" || ng "$LINENO"
 
 out=$(echo "ひだりうえ" | ./penalty_kick)
-echo "$out" | grep -q "枠外だ！惜しい！" || ng "$LINENO"
+echo "$out" | grep -q "枠外だ" || ng "$LINENO"
+
+out=$(echo "#$'" | ./penalty_kick)
+echo "$out" | grep -q "枠外だ" || ng "$LINENO"
 
 out=$(echo "　" | ./penalty_kick)
-echo "$out" | grep -q "枠外だ！惜しい！" || ng "$LINENO"
+echo "$out" | grep -q "枠外だ" || ng "$LINENO"
 
 out=$(echo "SDF" | ./penalty_kick)
-echo "$out" | grep -q "枠外だ！惜しい！" || ng "$LINENO"
+echo "$out" | grep -q "枠外だ" || ng "$LINENO"
 
 out=$(echo "345" | ./penalty_kick)
-echo "$out" | grep -q "枠外だ！惜しい！" || ng "$LINENO"
+echo "$out" | grep -q "枠外だ" || ng "$LINENO"
 
 [ "$res" -eq 0 ] && echo "OK"
 exit $res
