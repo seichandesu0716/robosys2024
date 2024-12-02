@@ -5,57 +5,27 @@
 import sys
 import random
 
-def take_penalty(player_choice, keeper_choice):
-    print(f"{player_choice}にシュート！")
+directions = ["右", "左", "右上", "左上", "真ん中","左下","右下"]
 
-    if player_choice == keeper_choice:
-        print("失敗！キーパーがセーブしました！")
-        return False
+
+for direction in sys.stdin:
+    direction = direction.strip()
+
+
+
+    print(f"シュート方法は {direction} です。")
+
+    keeper_choice = random.choice(directions)
+    print(f"キーパーの動き: {keeper_choice}")
+
+    if direction == keeper_choice:
+        print("キーパーに止められた！")
+    elif direction in ["右上", "左上", "右", "左"] and keeper_choice != direction:
+        print("ゴール！素晴らしいシュート！")
+    elif direction == "真ん中" and keeper_choice != "真ん中":
+        print("パネンカを蹴った。ゴール！")
     else:
-        print("ゴール！")
-        return True
+        print("枠外だ！惜しい！")
 
-def main():
-    directions = ["left", "right"]
-    goals = 0
-
-    try:
-        inputs = sys.stdin.read().strip().split()
-        if len(inputs) < 1:
-            print("エラー: 入力が不足しています。シュート回数と方向を指定してください。")
-            sys.exit(1)
-
-        total_shots = int(inputs[0])
-        if total_shots <= 0:
-            print("エラー: シュート回数は正の整数で入力してください。")
-            sys.exit(1)
-
-        player_choices = inputs[1:]
-        if len(player_choices) < total_shots:
-            print("エラー: 指定したシュート回数より少ないシュート方向が入力されました。")
-            sys.exit(1)
-
-        print(f"PK戦スタート！ {total_shots} 回のシュートに挑戦します！")
-
-        for i in range(total_shots):
-            player_choice = player_choices[i]
-            if player_choice not in directions:
-                print("無効な選択です。rightかleftを入力してください")
-                sys.exit(1)
-
-            keeper_choice = random.choice(directions)
-            if take_penalty(player_choice, keeper_choice):
-                goals += 1
-
-    except ValueError:
-        print("エラー: シュート回数は正の整数で入力してください。")
-        sys.exit(1)
-    except Exception as e:
-        print(f"エラー: 入力の処理中に問題が発生しました。({e})")
-        sys.exit(1)
-
-    print("\n--- 試合結果 ---")
-    print(f"{total_shots} 本中 {goals} ゴールを決めました！")
-
-if __name__ == "__main__":
-    main()
+    print("--- PK戦終了 ---")
+    break
