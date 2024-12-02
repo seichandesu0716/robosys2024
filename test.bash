@@ -9,27 +9,26 @@ ng () {
 
 res=0
 
-# シュート方向が「右」の場合のテスト
 out=$(echo "右" | ./penalty_kick)
-echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
+echo "$out" | grep -q "キーパーがボールをはじいた" || echo "$out" | grep -q "ゴール！素晴らしいシュート！" || ng "$LINENO"
 
-# シュート方向が「左」の場合のテスト
 out=$(echo "左" | ./penalty_kick)
-echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
+echo "$out" | grep -q "キーパーがボールをはじいた" || echo "$out" | grep -q "ゴール！素晴らしいシュート！" || ng "$LINENO"
 
-# シュート方向が「右上」の場合のテスト
 out=$(echo "右上" | ./penalty_kick)
-echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
+echo "$out" | grep -q "ポストに直撃した" || echo "$out" | grep -q "ゴール！隅にシュートを打った！" || ng "$LINENO"
 
-# シュート方向が「真ん中」の場合のテスト
 out=$(echo "真ん中" | ./penalty_kick)
-echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
+echo "$out" | grep -q  "キーパーは一歩も動かなかった" || echo "$out" | grep -q  "パネンカを蹴った。ゴール！" || ng "$LINENO"
 
 out=$(echo "右下" | ./penalty_kick)
-echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
+echo "$out" | grep -q "ポストに直撃した" || echo "$out" | grep -q "ゴール！隅にシュートを打った！" || ng "$LINENO"
 
 out=$(echo "左下" | ./penalty_kick)
-echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
+echo "$out" | grep -q "ポストに直撃した" || echo "$out" | grep -q "ゴール！隅にシュートを打った！" || ng "$LINENO"
+
+out=$(echo "左上" | ./penalty_kick)
+echo "$out" | grep -q "ポストに直撃した" || echo "$out" | grep -q "ゴール！隅にシュートを打った！" || ng "$LINENO"
 
 [ "$res" -eq 0 ] && echo "OK"
 exit $res

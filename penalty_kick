@@ -21,9 +21,9 @@ for direction in sys.stdin:
     if direction in ["左上","左下","右上","右下"] and direction == keeper_choice:
         print("ポストに直撃した")
     elif direction in ["右","左"] and direction == keeper_choice:
-        print("キーパーにキャッチされた")
+        print("キーパーがボールをはじいた")
     elif direction in ["真ん中"] and direction == keeper_choice:
-        print("キーパーは一歩も動かなった")
+        print("キーパーは一歩も動かなかった")
     elif direction in ["右", "左"] and keeper_choice != direction:
         print("ゴール！素晴らしいシュート！")
     elif direction in ["左上","右下","左下","右上"] and keeper_choice != direction:
