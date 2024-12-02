@@ -45,7 +45,7 @@ $ echo hfjis | ./penalty_kick
 ~~~
 
 # テスト環境、 必要なソフトウェア
-Ubuntu20.04.6 LTS on Windows
+・Ubuntu20.04.6 LTS on Windows
 
 ・Python
 
