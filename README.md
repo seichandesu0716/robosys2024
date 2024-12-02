@@ -44,9 +44,9 @@ $ echo hfjis | ./penalty_kick
 --- PK戦終了 ---
 ~~~
 
-# テスト環境
+# テスト環境、 必要なソフトウェア
 Ubuntu20.04.6 LTS on Windows
-# 必要なソフトウェア
+
 ・Python
 
 GitHubのCI/CDサービスを利用 (テスト済みバージョン:3.7~3.10)
