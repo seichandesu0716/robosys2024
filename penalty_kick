@@ -18,10 +18,16 @@ for direction in sys.stdin:
     keeper_choice = random.choice(directions)
     print(f"キーパーの動き: {keeper_choice}")
 
-    if direction == keeper_choice:
-        print("キーパーに止められた！")
-    elif direction in ["右上", "左上", "右", "左"] and keeper_choice != direction:
+    if direction in ["左上","左下","右上","右下"] and direction == keeper_choice:
+        print("ポストに直撃した")
+    elif direction in ["右","左"] and direction == keeper_choice:
+        print("キーパーにキャッチされた")
+    elif direction in ["真ん中"] and direction == keeper_choice:
+        print("キーパーは一歩も動かなった")
+    elif direction in ["右", "左"] and keeper_choice != direction:
         print("ゴール！素晴らしいシュート！")
+    elif direction in ["左上","右下","左下","右上"] and keeper_choice != direction:
+        print("ゴール！隅にシュートを打った！")
     elif direction == "真ん中" and keeper_choice != "真ん中":
         print("パネンカを蹴った。ゴール！")
     else:

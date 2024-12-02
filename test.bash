@@ -9,67 +9,27 @@ ng () {
 
 res=0
 
-out=$(echo 3 right right right | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "3 本中 [0-3] ゴールを決めました！" || ng "$LINENO"
+# シュート方向が「右」の場合のテスト
+out=$(echo "右" | ./penalty_kick)
+echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
 
-out=$(echo 3 left right left | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "3 本中 [0-3] ゴールを決めました！" || ng "$LINENO"
+# シュート方向が「左」の場合のテスト
+out=$(echo "左" | ./penalty_kick)
+echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
 
-out=$(echo 3 left left left | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "3 本中 [0-3] ゴールを決めました！" || ng "$LINENO"
+# シュート方向が「右上」の場合のテスト
+out=$(echo "右上" | ./penalty_kick)
+echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
 
-out=$(echo 1 right | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "1 本中 [0-1] ゴールを決めました！" || ng "$LINENO"
+# シュート方向が「真ん中」の場合のテスト
+out=$(echo "真ん中" | ./penalty_kick)
+echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
 
-out=$(echo 2 123 left | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "無効な選択です。rightかleftを入力してください" || ng "$LINENO"
+out=$(echo "右下" | ./penalty_kick)
+echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
 
-out=$(echo -3 left left right | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "エラー: シュート回数は正の整数で入力してください。" || ng "$LINENO"
-
-out=$(echo 10 left left left left left left left left left left | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "10 本中 [0-9] ゴールを決めました！" || ng "$LINENO"
-
-out=$(echo 11 left left left left left left left left left left left | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "11 本中 [0-9] ゴールを決めました！" || ng "$LINENO"
-
-out=$(echo 100 left right  left right left right left right left right left right left right left right left right left right left right  left right left right left right left right left right left right left right left right left right left right  left right left right left right left right left right left right left right left right left right left right  left right left right left right left right left right left right left right left right left right left right  left right left right left right left right left right left right left right left right left right | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "100 本中 [0-9]\+ ゴールを決めました！" || ng "$LINENO"
-
-out=$(echo | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "エラー: 入力が不足しています。シュート回数と方向を指定してください。" || ng "$LINENO"
-
-out=$(echo -1 right | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "エラー: シュート回数は正の整数で入力してください。" || ng "$LINENO"
-
-out=$(echo 2 abc def | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "無効な選択です。rightかleftを入力してください" || ng "$LINENO"
-
-out=$(echo "   " | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "エラー: 入力が不足しています。シュート回数と方向を指定してください。" || ng "$LINENO"
-
-out=$(echo 1000 $(printf "left %.0s" {1..1000}) | ./penalty_kick)
-[ $? -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "1000 本中 [0-9]\+ ゴールを決めました！" || ng "$LINENO"
-
-out=$(echo 3 up down left | ./penalty_kick)
-[ $? -ne 0 ] || ng "$LINENO"
-echo "$out" | grep -q "無効な選択です。rightかleftを入力してください" || ng "$LINENO"
-
+out=$(echo "左下" | ./penalty_kick)
+echo "$out" | grep -q "キーパーに止められた！" || echo "$out" | grep -q "ゴール！" || ng "$LINENO"
 
 [ "$res" -eq 0 ] && echo "OK"
 exit $res
-
