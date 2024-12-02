@@ -32,6 +32,6 @@ for direction in sys.stdin:
         print("パネンカを蹴った。ゴール！")
     else:
         print("枠外だ")
-
+#bn
     print("--- PK戦終了 ---")
     break
