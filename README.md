@@ -51,7 +51,6 @@ Ubuntu20.04.6 LTS　on Windows
  (テスト済みバージョン:3.7~3.10)
 
 # 参考資料
-random関数について・・・https://beginner-engineers.com/random-usage/ 
 
 バッジの作成・・・https://shields.io/badges
 
