@@ -46,7 +46,7 @@ rightにシュート！
 ~~~
 
 # テスト環境
-Ubuntu20.04.6 LTS
+Ubuntu20.04.6 LTS　on Windows
 # 必要なソフトウェア
 ・Python
  (テスト済みバージョン:3.7~3.10)
