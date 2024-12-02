@@ -57,9 +57,6 @@ random関数について・・・https://beginner-engineers.com/random-usage/
 
 READMEについて・・・https://qiita.com/Canard_engineer_c_cpp/items/81ce4e53881138dbf37f
 
-ソフトウェアのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson6.html
-
-Githubでのテスト・・・https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html#1
 # ライセンスと著作物
 ・このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます
 
