@@ -44,11 +44,12 @@ $ echo hfjis | ./penalty_kick
 --- PK戦終了 ---
 ~~~
 
-# テスト環境
-Ubuntu20.04.6 LTS　on Windows
-# 必要なソフトウェア
+# テスト環境、 必要なソフトウェア
+・Ubuntu20.04.6 LTS on Windows
+
 ・Python
- (テスト済みバージョン:3.7~3.10)
+
+GitHubのCI/CDサービスを利用 (テスト済みバージョン:3.7~3.10)
 
 # 参考資料
 
