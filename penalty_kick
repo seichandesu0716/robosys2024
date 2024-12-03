@@ -28,7 +28,7 @@ for direction in sys.stdin:
         print("ゴール！素晴らしいシュート！")
     elif direction in ["左上","右下","左下","右上"] and keeper_choice != direction:
         print("ゴール！隅にシュートを打った！")
-    elif direction == "真ん中" and keeper_choice != "真ん中":
+    elif direction in ["真ん中"] and keeper_choice != direction:
         print("パネンカを蹴った。ゴール！")
     else:
         print("枠外だ")
